@@ -106,18 +106,33 @@ const valentineQuiz = () => {
       if (noBtn.textContent === "No") {
         noBtn.textContent = "Think again!";
         tfAudio.play();
+        wthAudio.pause();
         gifs[0].style.display = "block";
+        gifs[1].style.display = "none";
+        gifs[2].style.display = "none";
+        gifs[3].style.display = "none";
+        gifs[4].style.display = "none";
+        gifs[5].style.display = "none";
       } else if (noBtn.textContent === "Think again!") {
         noBtn.textContent = "seriously";
         tfAudio.pause();
         movieAudio.play();
         gifs[0].style.display = "none";
         gifs[1].style.display = "block";
+        gifs[2].style.display = "none";
+        gifs[3].style.display = "none";
+        gifs[4].style.display = "none";
+        gifs[5].style.display = "none";
       } else if (noBtn.textContent === "seriously") {
         noBtn.textContent = "you can change your mind though!";
         cryAudio.play();
-        gifs[1].style.display = "none";
+        wthAudio.pause();
+        gifs[3].style.display = "none";
         gifs[2].style.display = "block";
+        gifs[0].style.display = "none";
+        gifs[1].style.display = "block";
+        gifs[4].style.display = "none";
+        gifs[5].style.display = "none";
       }
     });
 
@@ -209,16 +224,19 @@ const typewriterElement = document.querySelector(".valentine-message p");
 const kpop = document.querySelector(".kpop");
 const formWrap = document.querySelector(".form-wrap");
 const initialBtn = document.querySelector(".click-me button");
+const joeGif = document.querySelector(".joe-gif");
 
 const hydAudio = document.querySelector(".audio-wrap .hyd");
 
 initialBtn.addEventListener("click", () => {
   initialBtn.style.display = "none";
   hydAudio.play();
+  joeGif.style.display = "block";
   hydAudio.addEventListener("ended", () => {
     setTimeout(() => {
       formWrap.style.display = "inline-flex";
-    }, 500);
+    }, 100);
+    joeGif.style.display = "none";
   });
 });
 

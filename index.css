@@ -306,3 +306,10 @@ body {
         transform: translateY(0px) scale(1);
     }
 }
+
+.joe-gif {
+    max-width: 450px;
+    width: 100%;
+    margin-inline: auto;
+    display: none;
+}
