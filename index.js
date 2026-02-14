@@ -252,9 +252,6 @@ function typeWriter() {
     typewriterElement.textContent += text.charAt(index);
     index++;
     setTimeout(typeWriter, speed);
-    if (index === text.length) {
-      formWrap.style.transform = "scale(0)";
-    }
   }
 }
 
